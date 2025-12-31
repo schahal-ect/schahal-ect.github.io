@@ -1,0 +1,334 @@
+/* ================= THEME: TECH & FUTURISTIC ================= */
+/* Palette: Dark Navy (#0F172A), Neon Cyan (#22D3EE), Cool Gray (#64748B), Light Gray (#F4F4F4) */
+
+/* GLOBAL RESET */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0F172A; /* Dark Navy Background */
+    color: #F4F4F4; /* Light Gray Text */
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+.container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+
+/* NAVIGATION */
+nav {
+    background: rgba(15, 23, 42, 0.95); /* Dark Navy with slight transparency */
+    border-bottom: 1px solid #1E293B; /* Slightly lighter border */
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+nav .container { display: flex; justify-content: space-between; align-items: center; }
+
+.nav-logo { font-size: 1.5rem; font-weight: 700; color: #F4F4F4; }
+.nav-links a { margin-left: 20px; font-weight: 600; color: #64748B; } /* Cool Gray Links */
+.nav-links a:hover, .nav-links a.active { color: #22D3EE; } /* Neon Cyan Hover */
+
+/* HERO SECTION */
+.hero { text-align: center; padding: 80px 20px; }
+.hero h1 { font-size: 3.5rem; color: #F4F4F4; margin-bottom: 10px; }
+.tagline { color: #22D3EE; font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; } /* Neon Cyan Tagline */
+.bio { max-width: 700px; margin: 0 auto 40px; color: #94A3B8; } /* Lighter Cool Gray for reading */
+
+/* CONTACT CARD */
+.contact-card {
+    background: #1E293B; /* Slate 800 - Contrast against Dark Navy */
+    padding: 20px 40px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 40px;
+}
+.contact-item { margin: 12px 0; font-size: 1.1rem; display: flex; align-items: center; color: #F4F4F4; }
+.contact-item i { color: #22D3EE; width: 30px; font-size: 1.2rem; } /* Neon Cyan Icons */
+.contact-item a:hover { color: #22D3EE; }
+
+/* BUTTONS */
+.action-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.btn { padding: 12px 30px; border-radius: 5px; font-weight: 700; text-align: center; cursor: pointer; transition: 0.3s; }
+
+/* Primary Button: Neon Cyan Background, Dark Text for readability */
+.btn-primary {
+    background: #22D3EE;
+    color: #0F172A; 
+    border: none;
+}
+.btn-primary:hover {
+    background: #06b6d4; /* Slightly darker cyan */
+    transform: translateY(-2px);
+}
+
+/* Outline Button: Neon Cyan Border & Text */
+.btn-outline {
+    border: 2px solid #22D3EE;
+    color: #22D3EE;
+    background: transparent;
+}
+.btn-outline:hover {
+    background: rgba(34, 211, 238, 0.1);
+    color: #F4F4F4;
+}
+
+/* PAGE HEADERS */
+.page-header { text-align: center; padding: 40px 0; border-bottom: 1px solid #1E293B; margin-bottom: 40px; }
+.page-header h2 { font-size: 2.5rem; color: #F4F4F4; }
+
+/* GRIDS & CARDS */
+.grid-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+
+.card {
+    background: #1E293B; /* Slate 800 Card Background */
+    border: 1px solid #334155; /* Slate 700 Border */
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #22D3EE; /* Neon Cyan Border on Hover */
+    box-shadow: 0 10px 30px rgba(34, 211, 238, 0.1); /* Cyan Shadow */
+}
+
+/* IMAGES & ANIMATIONS */
+.card-img { width: 100%; height: 200px; object-fit: cover; border-bottom: 1px solid #334155; transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+.cert-img-container { padding: 20px; background: #020617; text-align: center; border-bottom: 1px solid #334155; } /* Almost black background for logos */
+.cert-img { max-width: 100%; max-height: 180px; object-fit: contain; transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+
+.card:hover .card-img, .card:hover .cert-img {
+    transform: scale(1.05); /* Smooth Zoom */
+}
+
+/* CARD CONTENT */
+.card-body { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+.card-title { font-size: 1.4rem; color: #F4F4F4; margin-bottom: 5px; }
+.card-skills { color: #22D3EE; font-size: 0.9rem; margin-bottom: 15px; font-weight: 600; text-transform: uppercase; } /* Neon Cyan Skills */
+.card-desc { font-size: 0.95rem; color: #94A3B8; margin-bottom: 20px; flex-grow: 1; }
+
+/* CARD BUTTONS */
+.card-btn { display: block; width: 100%; padding: 10px; text-align: center; border-radius: 4px; font-weight: 600; margin-top: auto; }
+
+.btn-report {
+    background: transparent;
+    color: #F4F4F4;
+    border: 1px solid #64748B;
+}
+.btn-report:hover {
+    border-color: #22D3EE;
+    color: #22D3EE;
+    background: rgba(34, 211, 238, 0.05);
+}
+
+.btn-verify {
+    background: rgba(34, 211, 238, 0.1); /* Very subtle cyan bg */
+    color: #22D3EE;
+    border: 1px solid #22D3EE;
+}
+.btn-verify:hover {
+    background: #22D3EE;
+    color: #0F172A;
+}
+
+/* EXPERIENCE & SKILLS */
+.exp-item {
+    background: #1E293B;
+    padding: 30px;
+    border-left: 4px solid #22D3EE; /* Neon Cyan Border */
+    margin-bottom: 30px;
+    border-radius: 0 8px 8px 0;
+}
+.exp-role { font-size: 1.5rem; color: #F4F4F4; font-weight: 700; }
+.exp-company { color: #64748B; font-size: 1.1rem; margin-bottom: 15px; font-style: italic; }
+.exp-list { padding-left: 20px; color: #CBD5E1; }
+.exp-list li { margin-bottom: 10px; }
+
+/* SKILLS GRID */
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.skill-card { background: #1E293B; padding: 20px; border: 1px solid #334155; border-radius: 8px; }
+.skill-title { font-weight: 700; color: #22D3EE; margin-bottom: 5px; font-size: 1.1rem; }
+.skill-list { color: #94A3B8; font-size: 0.9rem; }
+
+/* ================= MOUSE GLOW (UPDATED COLOR) ================= */
+.mouse-glow {
+    width: 600px;
+    height: 600px;
+    /* Updated Gradient: Neon Cyan (#22D3EE) to Transparent */
+    background: radial-gradient(circle, rgba(34, 211, 238, 0.08) 0%, rgba(15, 23, 42, 0) 70%);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    transition: all 0.1s ease-out;
+    filter: blur(40px);
+}
+
+/* Ensure content sits above glow */
+.container, nav, footer, .hero, .card, .exp-item, .contact-card {
+    position: relative;
+    z-index: 10;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= NEW HOME PAGE STYLES ================= */
+
+/* PROFILE IMAGE */
+.profile-img-container {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 30px; /* Center horizontally, margin below */
+    border-radius: 50%; /* Make it circular */
+    overflow: hidden;
+    border: 3px solid #22D3EE; /* Neon Cyan Border */
+    box-shadow: 0 0 25px rgba(34, 211, 238, 0.2); /* Subtle Cyan Glow */
+    background-color: #1E293B; /* Placeholder background */
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure photo fills circle without stretching */
+}
+
+/* SOCIAL ICONS ROW */
+.social-icons-row {
+    display: flex;
+    justify-content: center;
+    gap: 35px; /* Space between icons */
+    margin-bottom: 40px;
+}
+
+.social-icon {
+    font-size: 1.8rem;
+    color: #64748B; /* Cool Gray initial color */
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #22D3EE; /* Neon Cyan on hover */
+    transform: translateY(-5px); /* Slight lift effect */
+    text-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
+}
+
+/* ================= UPDATED BUTTON STYLES ================= */
+
+/* 1. The Navbar 'Contact Me' Button (Solid Cyan) */
+.primary-nav-btn {
+    margin-left: 30px;
+    padding: 10px 24px;
+    background: #22D3EE;       /* Neon Cyan Background */
+    color: #0F172A;            /* Dark Navy Text */
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(34, 211, 238, 0.3); /* Glow */
+}
+
+.primary-nav-btn:hover {
+    background: #06b6d4;
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(34, 211, 238, 0.6);
+}
+
+/* 2. The Hero 'View Projects' Button (Outlined to match others) */
+/* Ensure .btn-outline class is defined correctly for Hero use */
+.btn-outline {
+    border: 2px solid #22D3EE;
+    color: #22D3EE;
+    background: transparent;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.btn-outline:hover {
+    background: rgba(34, 211, 238, 0.1);
+    color: #F4F4F4;
+    box-shadow: 0 0 15px rgba(34, 211, 238, 0.2);
+}
+
+
+
+/* ================= MOBILE RESPONSIVENESS ================= */
+@media (max-width: 768px) {
+
+    /* 1. Stack the Navigation Bar */
+    nav .container {
+        flex-direction: column; /* Stack items vertically */
+        padding-bottom: 15px;
+    }
+
+    .nav-logo {
+        margin-bottom: 15px; /* Space below name */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        width: 100%;
+        text-align: center;
+        gap: 15px; /* Space between links */
+    }
+
+    .nav-links a {
+        margin-left: 0; /* Remove left margin since they are stacked */
+        display: block; /* Make them full width for easier tapping */
+        font-size: 1.1rem;
+    }
+
+    /* 2. Fix the Contact Me Button on Mobile */
+    .primary-nav-btn {
+        margin-left: 0; /* Remove old desktop margin */
+        margin-top: 10px;
+        width: 100%; /* Full width button looks better on mobile */
+        display: block;
+    }
+
+    /* 3. Adjust Hero Section */
+    .hero h1 {
+        font-size: 2.5rem; /* Smaller Title */
+    }
+
+    .profile-img-container {
+        width: 140px; /* Slightly smaller photo */
+        height: 140px;
+    }
+
+    /* 4. Fix Grid Layouts (Projects/Certs) */
+    .grid-layout {
+        grid-template-columns: 1fr; /* Force 1 column on phones */
+    }
+
+    /* 5. Adjust Padding */
+    .container {
+        padding: 15px;
+    }
+}
